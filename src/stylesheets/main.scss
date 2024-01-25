@@ -1,1 +1,83 @@
-// Your styles go here
+html{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul, aside ul{
+    list-style: none;
+    padding: 0;
+}
+
+nav ul > li{
+    display: inline-block;
+}
+
+nav, footer{
+    background-color: rgb(195, 195, 195);
+}
+
+aside{
+    background-color: rgba(40, 53, 174, 0.542);
+}
+
+body{
+    display: flex;
+    background-color: rgba(255, 233, 198, 0.461);
+    flex-direction: column;
+    height: 100vh;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column; /*Default for smaller screens, media query for larger screens*/
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+}
+
+aside{
+    flex: 0 1 150px;
+    order: 1;
+}
+
+article{
+    flex: 1 1 0;
+    order: 2;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer a{
+    padding-right: 10px;
+
+}
+
+@media all and (min-width: 600px)
+{
+    nav{
+        flex-direction: row;
+    }
+    
+    main{
+        flex-direction: row;
+    }
+    
+    footer{
+        flex-direction: row;
+    }
+
+    footer a:last-of-type{
+        flex-grow: 1;
+    }
+
+}
+
